@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'The Concierge - Experiências Exclusivas',
     description: 'Criando jornadas exclusivas e memórias inesquecíveis com serviço personalizado.',
