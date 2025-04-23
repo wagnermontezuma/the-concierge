@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
-import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 import { locales } from '@/i18n/config';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -23,7 +24,7 @@ export default async function LocaleLayout({ children, params }: RootLayoutProps
 
   if (!locales.includes(locale as (typeof locales)[number])) notFound();
 
-  const messages = useMessages();
+  const messages = await getMessages();
 
   return (
     <html lang={locale} suppressHydrationWarning>
