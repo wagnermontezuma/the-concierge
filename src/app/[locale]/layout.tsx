@@ -1,7 +1,8 @@
 import { Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
-import { NextIntlClientProvider } from 'next-intl';
-import Header from '@/components/Header';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { locales } from '@/i18n/config';
+import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import '../globals.css';
@@ -9,39 +10,28 @@ import '../globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export function generateStaticParams() {
-  return [{ locale: 'pt' }, { locale: 'en' }];
+  return locales.map((locale) => ({ locale }));
 }
 
-export default async function LocaleLayout({
+export default function LocaleLayout({
   children,
-  params,
+  params: { locale }
 }: {
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  const { locale } = params;
-  
-  if (!locale) {
-    notFound();
-  }
+  if (!locales.includes(locale as (typeof locales)[number])) notFound();
 
-  let messages;
-  try {
-    messages = (await import(`@/i18n/messages/${locale}.json`)).default;
-  } catch (error) {
-    notFound();
-  }
+  const messages = useMessages();
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={inter.className} suppressHydrationWarning>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <div className="min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-grow">{children}</main>
-            <Footer />
-            <WhatsAppButton />
-          </div>
+        <NextIntlClientProvider messages={messages} locale={locale}>
+          <Navbar />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+          <WhatsAppButton />
         </NextIntlClientProvider>
       </body>
     </html>

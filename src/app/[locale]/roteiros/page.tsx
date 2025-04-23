@@ -45,7 +45,7 @@ const routesData = [
 ];
 
 export default function RoteirosPage() {
-  const t = useTranslations('routes');
+  const t = useTranslations('itineraries');
 
   // Função para gerar o link do WhatsApp
   const generateWhatsAppLink = (routeTitle: string) => {

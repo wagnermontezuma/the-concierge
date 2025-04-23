@@ -7,13 +7,14 @@ import { FaWhatsapp, FaEnvelope, FaInstagram } from 'react-icons/fa';
 
 export default function ContatoPage() {
   const t = useTranslations('contact');
+  const tw = useTranslations('whatsapp');
 
   const contactChannels = [
     {
       icon: FaWhatsapp,
-      title: t('whatsappTitle'),
-      description: t('whatsappText'),
-      action: t('whatsappButton'),
+      title: tw('title'),
+      description: tw('message'),
+      action: tw('buttonText'),
       href: 'https://wa.me/5511999999999'
     },
     {

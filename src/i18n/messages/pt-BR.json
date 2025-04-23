@@ -37,10 +37,17 @@
     "rights": "Todos os direitos reservados.",
     "institutionalText": "Criando jornadas exclusivas e memórias inesquecíveis com serviço personalizado."
   },
+  "home": {
+    "title": "The Concierge",
+    "subtitle": "Experiências Exclusivas",
+    "description": "Criando jornadas exclusivas e memórias inesquecíveis com serviço personalizado.",
+    "cta": "Conheça Nossos Serviços"
+  },
   "about": {
     "metadataTitle": "Quem Somos | The Concierge - Experiências de Luxo",
     "metadataDescription": "Conheça a essência da The Concierge. Somos especialistas em criar experiências exclusivas e personalizadas com sofisticação e atenção aos detalhes.",
-    "title": "A Essência da Exclusividade",
+    "title": "Quem Somos",
+    "description": "Somos especialistas em criar experiências únicas e memoráveis para nossos clientes.",
     "heroAlt": "Vista panorâmica simbolizando a visão da The Concierge",
     "intro": "Na The Concierge, transcendemos o conceito de viagem. Somos arquitetos de momentos únicos, dedicados a transformar seus desejos nas mais sofisticadas e memoráveis realidades.",
     "storyTitle": "Nossa História: Paixão por Detalhes",
@@ -62,8 +69,8 @@
     "historyImageAlt": "Imagem representativa da nossa história e tradição"
   },
   "experiences": {
-    "title": "Explore Nossas Experiências Exclusivas",
-    "description": "Criamos momentos únicos e personalizados, desenhados especialmente para superar suas expectativas. Descubra o que a The Concierge pode oferecer.",
+    "title": "Experiências",
+    "description": "Descubra experiências exclusivas cuidadosamente selecionadas para você.",
     "exp1Title": "Gastronomia Exclusiva",
     "exp1Description": "Jantares privativos com chefs renomados, degustações harmonizadas e acesso aos restaurantes mais cobiçados.",
     "exp2Title": "Passeios Privados",
@@ -85,9 +92,9 @@
       "alt": "Iate, jato particular e carro de luxo"
     }
   },
-  "routes": {
-    "title": "Roteiros Criados Sob Medida",
-    "description": "Explore destinos fascinantes com itinerários exclusivos, pensados em cada detalhe para proporcionar uma viagem memorável e sem preocupações.",
+  "itineraries": {
+    "title": "Roteiros",
+    "description": "Roteiros personalizados para tornar sua viagem inesquecível.",
     "routeButtonText": "Solicitar Detalhes",
     "route1Title": "Itália Clássica: Arte e Sabor",
     "route1Summary": "Uma jornada inesquecível por Roma, Florença e Veneza, explorando a rica história, arte e culinária italiana.",
@@ -113,8 +120,9 @@
   "contact": {
     "metadataTitle": "Contato | The Concierge - Fale Conosco",
     "metadataDescription": "Entre em contato com a The Concierge para planejar sua próxima experiência de luxo. Preencha o formulário ou use nossos canais diretos.",
-    "title": "Entre em Contato",
-    "description": "Tem alguma dúvida ou deseja iniciar o planejamento da sua próxima experiência exclusiva? Preencha o formulário abaixo ou utilize nossos canais diretos.",
+    "title": "Contato",
+    "description": "Entre em contato conosco para começar sua jornada.",
+    "whatsapp": "Fale conosco no WhatsApp",
     "formTitle": "Envie Sua Mensagem",
     "formNameLabel": "Nome Completo",
     "formEmailLabel": "E-mail",
@@ -122,9 +130,6 @@
     "formMessageLabel": "Sua Mensagem",
     "formLgpdLabel": "Concordo com a Política de Privacidade e com o uso dos meus dados para contato.",
     "submitButton": "Enviar Mensagem",
-    "whatsappTitle": "WhatsApp",
-    "whatsappText": "Converse conosco diretamente pelo WhatsApp para um atendimento rápido e personalizado.",
-    "whatsappButton": "Iniciar Conversa",
     "emailTitle": "E-mail",
     "emailText": "Envie-nos um e-mail para informações detalhadas sobre nossos serviços.",
     "emailButton": "Enviar E-mail",

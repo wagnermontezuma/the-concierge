@@ -1,91 +1,117 @@
-'use client';
+import { useState, memo } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useIntl } from 'react-intl';
+import { motion, AnimatePresence } from 'framer-motion';
 
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { usePathname } from 'next/navigation';
-import { useTranslations } from 'next-intl';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+// Tipos
+interface NavigationItem {
+  path: string;
+  label: string;
+}
 
-export default function Header() {
-  const t = useTranslations('navigation');
-  const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState(false);
+// Estilos constantes
+const linkStyles = {
+  default: "text-gray-600 hover:text-primary transition-colors",
+  active: "text-primary font-medium",
+};
 
-  const navItems = [
-    { href: '/', label: t('home') },
-    { href: '/quem-somos', label: t('about') },
-    { href: '/experiencias', label: t('experiences') },
-    { href: '/roteiros', label: t('itineraries') },
-    { href: '/contato', label: t('contact') },
-  ];
+// Items de navegação
+const getNavigationItems = (intl: ReturnType<typeof useIntl>): NavigationItem[] => [
+  { path: '/', label: intl.formatMessage({ id: 'navigation.home' }) },
+  { path: '/about', label: intl.formatMessage({ id: 'navigation.about' }) },
+  { path: '/experiences', label: intl.formatMessage({ id: 'navigation.experiences' }) },
+  { path: '/itineraries', label: intl.formatMessage({ id: 'navigation.itineraries' }) },
+  { path: '/contact', label: intl.formatMessage({ id: 'navigation.contact' }) },
+];
 
-  const handleLinkClick = () => {
-    if (isOpen) {
-      setIsOpen(false);
-    }
-  };
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const intl = useIntl();
+  const location = useLocation();
+  const navigationItems = getNavigationItems(intl);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
-      <nav className="container mx-auto px-4 py-3 md:py-2">
+    <header className="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+      <nav 
+        className="container mx-auto px-4 py-4" 
+        role="navigation" 
+        aria-label="Menu principal"
+      >
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex-shrink-0 flex items-center p-2 -ml-2" onClick={handleLinkClick}>
-            <Image
-              src="/images/logohorizontal.png"
-              alt="The Concierge - Logo horizontal"
-              width={180}
-              height={40}
-              priority
-            />
+          <Link 
+            to="/" 
+            className="text-2xl font-serif text-primary"
+            aria-label="The Concierge - Página inicial"
+          >
+            The Concierge
           </Link>
 
-          <div className="hidden md:flex space-x-6 lg:space-x-8 items-center">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`text-gray-600 hover:text-blue-700 transition-colors duration-200 ${
-                  pathname.endsWith(item.href) || (pathname === '/' + (pathname.split('/')[1] || '') && item.href === '/') ? 'font-semibold text-blue-700' : ''
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? (
-              <XMarkIcon className="h-6 w-6 text-gray-700" />
-            ) : (
-              <Bars3Icon className="h-6 w-6 text-gray-700" />
-            )}
-          </button>
-        </div>
-
-        {isOpen && (
-          <div className="md:hidden mt-2 border-t border-gray-100 pt-4">
-            <div className="flex flex-col space-y-3">
-              {navItems.map((item) => (
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex space-x-8" role="list">
+            {navigationItems.map((item) => (
+              <div key={item.path} role="listitem">
                 <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-700 ${
-                    pathname.endsWith(item.href) || (pathname === '/' + (pathname.split('/')[1] || '') && item.href === '/') ? 'bg-blue-50 text-blue-700 font-semibold' : ''
+                  to={item.path}
+                  className={`${linkStyles.default} ${
+                    location.pathname === item.path ? linkStyles.active : ''
                   }`}
-                  onClick={handleLinkClick}
+                  aria-current={location.pathname === item.path ? 'page' : undefined}
                 >
                   {item.label}
                 </Link>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
-        )}
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-expanded={isMenuOpen}
+            aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}
+            aria-controls="mobile-menu"
+          >
+            <div className="w-6 h-6 flex flex-col justify-center space-y-1.5">
+              <span className={`block w-full h-0.5 bg-gray-600 transform transition-transform ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+              <span className={`block w-full h-0.5 bg-gray-600 transition-opacity ${isMenuOpen ? 'opacity-0' : ''}`} />
+              <span className={`block w-full h-0.5 bg-gray-600 transform transition-transform ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+            </div>
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              id="mobile-menu"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="md:hidden"
+              role="list"
+            >
+              <div className="py-4 space-y-4">
+                {navigationItems.map((item) => (
+                  <div key={item.path} role="listitem">
+                    <Link
+                      to={item.path}
+                      className={`block ${linkStyles.default} ${
+                        location.pathname === item.path ? linkStyles.active : ''
+                      }`}
+                      onClick={() => setIsMenuOpen(false)}
+                      aria-current={location.pathname === item.path ? 'page' : undefined}
+                    >
+                      {item.label}
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
     </header>
   );
-} 
+};
+
+export default memo(Header); 

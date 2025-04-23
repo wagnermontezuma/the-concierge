@@ -2,22 +2,13 @@ import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
-  const t = await getTranslations({ locale, namespace: 'Index' });
-
   return {
     title: 'The Concierge - Experiências Exclusivas',
-    description: 'Descubra experiências únicas e roteiros personalizados com The Concierge. Sua jornada começa aqui.',
+    description: 'Criando jornadas exclusivas e memórias inesquecíveis com serviço personalizado.',
     openGraph: {
       title: 'The Concierge - Experiências Exclusivas',
-      description: 'Descubra experiências únicas e roteiros personalizados com The Concierge. Sua jornada começa aqui.',
-      images: [
-        {
-          url: '/images/og-image.jpg',
-          width: 1200,
-          height: 630,
-          alt: 'The Concierge',
-        },
-      ],
+      description: 'Criando jornadas exclusivas e memórias inesquecíveis com serviço personalizado.',
+      images: ['/images/banner.png'],
     },
   };
 }
@@ -27,5 +18,5 @@ export default function HomeLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return <>{children}</>;
 } 
