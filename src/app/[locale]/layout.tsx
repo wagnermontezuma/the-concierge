@@ -13,13 +13,14 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export default function LocaleLayout({
-  children,
-  params: { locale }
-}: {
+interface RootLayoutProps {
   children: React.ReactNode;
   params: { locale: string };
-}) {
+}
+
+export default async function LocaleLayout({ children, params }: RootLayoutProps) {
+  const { locale } = params;
+
   if (!locales.includes(locale as (typeof locales)[number])) notFound();
 
   const messages = useMessages();
