@@ -72,14 +72,27 @@ export default function RoteirosPage() {
       {/* Container Principal com z-10 para ficar acima do logo */}
       <div className="relative z-10">
           {/* Header Section */}
-          <section className="bg-gradient-to-r from-teal-600 to-cyan-500 text-white py-16 md:py-24">
-            <div className="container mx-auto px-4 text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('title')}</h1>
-              <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-                {t('description')}
-              </p>
+          <div className="relative w-full h-[60vh] min-h-[400px]">
+            <Image
+              src="/images/roteiros.png"
+              alt="Banner da página de Roteiros"
+              fill
+              className="object-cover"
+              priority
+              sizes="100vw"
+              quality={90}
+            />
+            <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+              <div className="container mx-auto px-4 text-center">
+                <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+                  {t('title')}
+                </h1>
+                <p className="text-xl md:text-2xl max-w-3xl mx-auto text-white">
+                  {t('description')}
+                </p>
+              </div>
             </div>
-          </section>
+          </div>
 
           {/* Routes Grid */}
           <section className="py-16">
@@ -102,8 +115,6 @@ export default function RoteirosPage() {
               </div>
             </div>
           </section>
-
-           {/* Nota: O botão do WhatsApp deve ser gerenciado pelo Layout principal */}
       </div>
     </div>
   );

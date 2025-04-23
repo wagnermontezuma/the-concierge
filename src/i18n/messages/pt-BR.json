@@ -1,7 +1,7 @@
 {
   "Index": {
     "title": "Bem-vindo ao The Concierge",
-    "description": "Seu assistente pessoal para gerenciamento de tarefas",
+    "description": "Cada jornada começa com um sonho. Nós o tornamos realidade com exclusividade e perfeição.",
     "discover": "Descubra Mais",
     "services": "Nossos Serviços",
     "service1": {
@@ -122,12 +122,21 @@
     "formMessageLabel": "Sua Mensagem",
     "formLgpdLabel": "Concordo com a Política de Privacidade e com o uso dos meus dados para contato.",
     "submitButton": "Enviar Mensagem",
-    "infoTitle": "Nossos Contatos",
-    "infoEmail": "E-mail",
-    "infoPhone": "Telefone",
-    "infoAddress": "Endereço",
-    "mapTitle": "Nossa Localização",
-    "mapPlaceholder": "Carregando mapa...",
-    "logoAlt": "The Concierge - Logo"
+    "whatsappTitle": "WhatsApp",
+    "whatsappText": "Converse conosco diretamente pelo WhatsApp para um atendimento rápido e personalizado.",
+    "whatsappButton": "Iniciar Conversa",
+    "emailTitle": "E-mail",
+    "emailText": "Envie-nos um e-mail para informações detalhadas sobre nossos serviços.",
+    "emailButton": "Enviar E-mail",
+    "instagramTitle": "Instagram",
+    "instagramText": "Siga-nos no Instagram para descobrir nossas experiências exclusivas.",
+    "instagramButton": "Seguir",
+    "bannerAlt": "Banner da página de contato"
+  },
+  "whatsapp": {
+    "title": "WhatsApp",
+    "message": "Fale conosco pelo WhatsApp",
+    "buttonText": "Iniciar conversa",
+    "ariaLabel": "Botão para iniciar conversa no WhatsApp"
   }
 } 

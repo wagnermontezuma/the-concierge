@@ -17,28 +17,27 @@ export default function Page() {
   return (
     <div className="bg-white text-gray-800">
       {/* 1. Seção de Introdução */}
-      <section className="relative pt-24 pb-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="absolute top-0 left-0 w-full h-64 overflow-hidden z-0">
-          <Image
-            src="/images/bannerexclusividade.png"
-            alt={t('bannerAlt')}
-            width={1920}
-            height={600}
-            className="w-full h-auto object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
+      <div className="relative w-full h-[60vh] min-h-[400px]">
+        <Image
+          src="/images/bannerexclusividade.png"
+          alt={t('bannerAlt')}
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+          quality={90}
+        />
+        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+              {t('title')}
+            </h1>
+            <p className="text-lg md:text-xl text-white max-w-3xl mx-auto">
+              {t('intro')}
+            </p>
+          </div>
         </div>
-        
-        <div className="container mx-auto px-4 max-w-7xl text-center relative z-10 mt-40">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            {t('title')}
-          </h1>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            {t('intro')}
-          </p>
-        </div>
-      </section>
+      </div>
 
       {/* 2. Seção de Storytelling */}
       <section className="py-16 md:py-24">
@@ -99,20 +98,30 @@ export default function Page() {
       </section>
 
       {/* 5. Chamada para Ação */}
-      <section className="bg-blue-900 text-white py-16 md:py-20">
-        <div className="container mx-auto px-4 max-w-7xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('ctaTitle')}</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            {t('ctaText')}
-          </p>
-          <Link
-            href="/contato"
-            className="inline-block bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors text-lg"
-          >
-            {t('ctaButton')}
-          </Link>
+      <div className="relative w-full h-[60vh] min-h-[400px]">
+        <Image
+          src="/images/grandejornada.png"
+          alt="Realize sua próxima grande jornada"
+          fill
+          className="object-cover"
+          sizes="100vw"
+          quality={90}
+        />
+        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">{t('ctaTitle')}</h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto text-white">
+              {t('ctaText')}
+            </p>
+            <Link
+              href="/contato"
+              className="inline-block bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors text-lg"
+            >
+              {t('ctaButton')}
+            </Link>
+          </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 } 

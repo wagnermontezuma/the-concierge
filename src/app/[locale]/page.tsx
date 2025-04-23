@@ -1,97 +1,75 @@
-import { Metadata } from 'next';
+'use client';
+
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'The Concierge - Experiências Exclusivas',
-  description: 'Descubra experiências únicas e roteiros personalizados com The Concierge. Sua jornada começa aqui.',
-  openGraph: {
-    title: 'The Concierge - Experiências Exclusivas',
-    description: 'Descubra experiências únicas e roteiros personalizados com The Concierge. Sua jornada começa aqui.',
-    images: [
-      {
-        url: '/images/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'The Concierge',
-      },
-    ],
-  },
-};
-
-export default function Home({
-  params: { locale }
-}: {
-  params: { locale: string }
-}) {
+export default function Home() {
   const t = useTranslations('Index');
 
   return (
-    <div className="min-h-screen">
+    <main className="bg-white">
       {/* Hero Section */}
-      <section 
-        className="relative h-screen flex items-center justify-start overflow-hidden"
-        style={{
-          backgroundImage: "url('/images/banner.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat"
-        }}
-      >
-        {/* Overlay escuro */}
-        <div className="absolute inset-0 bg-black bg-opacity-30" />
-
-        <div className="relative z-10 container mx-auto px-4 md:px-8 lg:px-12">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
+      <div className="relative w-full h-screen min-h-[600px]">
+        <Image
+          src="/images/banner.png"
+          alt={t('banner.alt')}
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+          quality={90}
+        />
+        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               {t('title')}
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white">
+            <p className="text-xl md:text-2xl mb-8 text-white max-w-3xl mx-auto">
               {t('description')}
             </p>
-            <button className="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors text-lg">
+            <Link
+              href="/contato"
+              className="inline-block bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors text-lg"
+            >
               {t('discover')}
-            </button>
+            </Link>
           </div>
         </div>
+      </div>
 
-        <div className="absolute bottom-4 right-4 z-0 opacity-10 pointer-events-none">
-          <Image 
-            src="/images/logo.png"
-            alt="The Concierge - Logomarca Sutil"
-            width={100}
-            height={100}
-            className="w-20 h-20 md:w-24 md:h-24"
-          />
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
+      {/* Services Section */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4 max-w-7xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12 md:mb-16">
             {t('services')}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             {/* Service 1 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">{t('service1.title')}</h3>
+            <div className="bg-white p-8 rounded-lg shadow-md text-center border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                {t('service1.title')}
+              </h3>
               <p className="text-gray-600">
                 {t('service1.description')}
               </p>
             </div>
 
             {/* Service 2 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">{t('service2.title')}</h3>
+            <div className="bg-white p-8 rounded-lg shadow-md text-center border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                {t('service2.title')}
+              </h3>
               <p className="text-gray-600">
                 {t('service2.description')}
               </p>
             </div>
 
             {/* Service 3 */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4">{t('service3.title')}</h3>
+            <div className="bg-white p-8 rounded-lg shadow-md text-center border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                {t('service3.title')}
+              </h3>
               <p className="text-gray-600">
                 {t('service3.description')}
               </p>
@@ -99,6 +77,8 @@ export default function Home({
           </div>
         </div>
       </section>
-    </div>
+
+      {/* Restante do conteúdo... */}
+    </main>
   );
 } 

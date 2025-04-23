@@ -56,14 +56,27 @@ export default function ExperienciasPage() {
       {/* Container Principal com z-10 para ficar acima do logo */}
       <div className="relative z-10">
         {/* Header Section */}
-        <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 md:py-24">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('title')}</h1>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-              {t('description')}
-            </p>
+        <div className="relative w-full h-[60vh] min-h-[400px]">
+          <Image
+            src="/images/bannerexperiencias.png"
+            alt="Banner de Experiências Exclusivas"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+            quality={90}
+          />
+          <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+            <div className="container mx-auto px-4 text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+                {t('title')}
+              </h1>
+              <p className="text-xl md:text-2xl max-w-3xl mx-auto text-white">
+                {t('description')}
+              </p>
+            </div>
           </div>
-        </section>
+        </div>
 
         {/* Experiences Grid/Slider */}
         <section className="py-16">
