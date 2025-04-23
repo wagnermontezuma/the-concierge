@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
 
-type Props = {
+interface Props {
   children: ReactNode;
   params: { locale: string };
-};
+}
 
-export default async function Layout({ children }: Props) {
-  return children;
+export default function Layout({ children }: Props) {
+  return <section className="min-h-screen">{children}</section>;
 } 
