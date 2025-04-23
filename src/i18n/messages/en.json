@@ -1,0 +1,133 @@
+{
+  "Index": {
+    "title": "Welcome to The Concierge",
+    "description": "Your personal task management assistant",
+    "discover": "Discover More",
+    "services": "Our Services",
+    "service1": {
+      "title": "Unique Experiences",
+      "description": "Discover exclusive and memorable experiences in amazing destinations."
+    },
+    "service2": {
+      "title": "Customized Itineraries",
+      "description": "Tailored itineraries to meet your expectations and desires."
+    },
+    "service3": {
+      "title": "Exclusive Service",
+      "description": "Dedicated concierge to ensure a perfect experience."
+    },
+    "banner": {
+      "alt": "Main banner featuring exclusive travel scenery"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "experiences": "Experiences",
+    "itineraries": "Itineraries",
+    "contact": "Contact"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Information",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "socialMedia": "Social Media",
+    "rights": "All rights reserved.",
+    "institutionalText": "Crafting exclusive journeys and unforgettable memories with personalized service."
+  },
+  "about": {
+    "metadataTitle": "About Us | The Concierge - Luxury Experiences",
+    "metadataDescription": "Discover the essence of The Concierge. We specialize in creating exclusive, personalized experiences with sophistication and attention to detail.",
+    "title": "The Essence of Exclusivity",
+    "heroAlt": "Panoramic view symbolizing The Concierge's vision",
+    "intro": "At The Concierge, we transcend the concept of travel. We are architects of unique moments, dedicated to transforming your desires into the most sophisticated and memorable realities.",
+    "storyTitle": "Our Story: A Passion for Detail",
+    "storyText": "Born from the desire to offer unparalleled service, The Concierge was founded by experts with extensive experience in luxury hospitality and travel. Our philosophy is simple: deeply understand your dreams to exceed your expectations. With a global network of exclusive partners and a keen eye for every detail, we ensure your journey is flawless from start to finish.",
+    "institutionalImageAlt": "Elegant setting representing The Concierge service",
+    "valuesTitle": "Our Pillars",
+    "value1Title": "Exclusivity",
+    "value1Text": "Privileged access to locations, services, and events few know about, ensuring truly unique experiences.",
+    "value2Title": "Personalized Service",
+    "value2Text": "A dedicated concierge accompanies you, anticipating needs and ensuring every moment is perfect.",
+    "value3Title": "Experience Curation",
+    "value3Text": "Careful selection of the best destinations, activities, and services, aligned with your profile and preferences.",
+    "teamTitle": "Our Team",
+    "teamPlaceholderText": "Coming soon: meet the specialists dedicated to making your experience unforgettable.",
+    "ctaTitle": "Embark on Your Next Great Journey",
+    "ctaText": "Allow us to design your next adventure. Contact us and discover a world of exclusive possibilities.",
+    "ctaButton": "Contact Us",
+    "bannerAlt": "Exclusivity banner featuring luxurious environments",
+    "historyImageAlt": "Image representing our history and tradition"
+  },
+  "experiences": {
+    "title": "Explore Our Exclusive Experiences",
+    "description": "We create unique and personalized moments, designed especially to exceed your expectations. Discover what The Concierge can offer.",
+    "exp1Title": "Exclusive Gastronomy",
+    "exp1Description": "Private dinners with renowned chefs, wine pairing tastings, and access to the most coveted restaurants.",
+    "exp2Title": "Private Tours",
+    "exp2Description": "Cultural tours, tailor-made adventures, and destination exploration with specialized guides and luxury transport.",
+    "exp3Title": "VIP Access",
+    "exp3Description": "Privileged entry to exclusive events, shows, sporting spectacles, and cultural backstages.",
+    "exp4Title": "Luxury Services",
+    "exp4Description": "Yacht and private jet rentals, personal shoppers, and everything you need for an impeccable stay.",
+    "gastronomia": {
+      "alt": "Renowned chef preparing an exclusive dish"
+    },
+    "passeios": {
+      "alt": "Private guide with couple in front of the Eiffel Tower"
+    },
+    "acessoVip": {
+      "alt": "Illuminated stage at an exclusive show"
+    },
+    "luxo": {
+      "alt": "Yacht, private jet and luxury car"
+    }
+  },
+  "routes": {
+    "title": "Tailor-Made Itineraries",
+    "description": "Explore fascinating destinations with exclusive itineraries, thoughtfully designed in every detail to provide a memorable and worry-free journey.",
+    "routeButtonText": "Request Details",
+    "route1Title": "Classic Italy: Art and Flavor",
+    "route1Summary": "An unforgettable journey through Rome, Florence, and Venice, exploring Italy's rich history, art, and cuisine.",
+    "route2Title": "Romantic France: Paris and Provence",
+    "route2Summary": "Experience the charm of Paris and the beauty of Provence's lavender fields with exclusive experiences.",
+    "route3Title": "Historic Greece: Athens and Islands",
+    "route3Summary": "Discover the archaeological treasures of Athens and relax on the stunning islands of Santorini and Mykonos.",
+    "route4Title": "Japan: Tradition and Modernity",
+    "route4Summary": "A fascinating contrast between the ancient culture of Kyoto and the vibrant metropolis of Tokyo.",
+    "italia": {
+      "alt": "Florence Cathedral at sunset"
+    },
+    "franca": {
+      "alt": "Provence lavender fields and Eiffel Tower"
+    },
+    "grecia": {
+      "alt": "Parthenon with view to the Aegean Sea"
+    },
+    "japao": {
+      "alt": "Traditional temple in front of Tokyo Tower"
+    }
+  },
+  "contact": {
+    "metadataTitle": "Contact | The Concierge - Get in Touch",
+    "metadataDescription": "Contact The Concierge to plan your next luxury experience. Fill out the form or use our direct channels.",
+    "title": "Get in Touch",
+    "description": "Have questions or want to start planning your next exclusive experience? Fill out the form below or use our direct channels.",
+    "formTitle": "Send Your Message",
+    "formNameLabel": "Full Name",
+    "formEmailLabel": "E-mail",
+    "formPhoneLabel": "Phone (with area code)",
+    "formMessageLabel": "Your Message",
+    "formLgpdLabel": "I agree to the Privacy Policy and the use of my data for contact purposes.",
+    "submitButton": "Send Message",
+    "infoTitle": "Our Contacts",
+    "infoEmail": "Email",
+    "infoPhone": "Phone",
+    "infoAddress": "Address",
+    "mapTitle": "Our Location",
+    "mapPlaceholder": "Loading map...",
+    "logoAlt": "The Concierge - Logo"
+  }
+} 

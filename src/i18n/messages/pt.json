@@ -1,0 +1,133 @@
+{
+  "Index": {
+    "title": "Bem-vindo ao The Concierge",
+    "description": "Seu assistente pessoal para gerenciamento de tarefas",
+    "discover": "Descubra Mais",
+    "services": "Nossos Serviços",
+    "service1": {
+      "title": "Experiências Únicas",
+      "description": "Descubra experiências exclusivas e memoráveis em destinos incríveis."
+    },
+    "service2": {
+      "title": "Roteiros Personalizados",
+      "description": "Roteiros sob medida para atender às suas expectativas e desejos."
+    },
+    "service3": {
+      "title": "Atendimento Exclusivo",
+      "description": "Concierge dedicado para garantir uma experiência perfeita."
+    },
+    "banner": {
+      "alt": "Banner principal com cenário de viagem exclusivo"
+    }
+  },
+  "navigation": {
+    "home": "Início",
+    "about": "Quem Somos",
+    "experiences": "Experiências",
+    "itineraries": "Roteiros",
+    "contact": "Contato"
+  },
+  "footer": {
+    "quickLinks": "Links Rápidos",
+    "contactInfo": "Informações de Contato",
+    "email": "Email",
+    "phone": "Telefone",
+    "address": "Endereço",
+    "socialMedia": "Redes Sociais",
+    "rights": "Todos os direitos reservados.",
+    "institutionalText": "Criando jornadas exclusivas e memórias inesquecíveis com serviço personalizado."
+  },
+  "about": {
+    "metadataTitle": "Quem Somos | The Concierge - Experiências de Luxo",
+    "metadataDescription": "Conheça a essência da The Concierge. Somos especialistas em criar experiências exclusivas e personalizadas com sofisticação e atenção aos detalhes.",
+    "title": "A Essência da Exclusividade",
+    "heroAlt": "Vista panorâmica simbolizando a visão da The Concierge",
+    "intro": "Na The Concierge, transcendemos o conceito de viagem. Somos arquitetos de momentos únicos, dedicados a transformar seus desejos nas mais sofisticadas e memoráveis realidades.",
+    "storyTitle": "Nossa História: Paixão por Detalhes",
+    "storyText": "Nascida do desejo de oferecer um serviço incomparável, a The Concierge foi fundada por especialistas com vasta experiência em hospitalidade e viagens de luxo. Nossa filosofia é simples: entender profundamente seus sonhos para superar suas expectativas. Com uma rede global de parceiros exclusivos e um olhar atento a cada detalhe, garantimos que sua jornada seja impecável, do início ao fim.",
+    "institutionalImageAlt": "Ambiente elegante representando o serviço The Concierge",
+    "valuesTitle": "Nossos Pilares",
+    "value1Title": "Exclusividade",
+    "value1Text": "Acesso privilegiado a locais, serviços e eventos que poucos conhecem, garantindo experiências verdadeiramente únicas.",
+    "value2Title": "Atendimento Personalizado",
+    "value2Text": "Um concierge dedicado acompanha você, antecipando necessidades e garantindo que cada momento seja perfeito.",
+    "value3Title": "Curadoria de Experiências",
+    "value3Text": "Seleção criteriosa dos melhores destinos, atividades e serviços, alinhados ao seu perfil e preferências.",
+    "teamTitle": "Nossa Equipe",
+    "teamPlaceholderText": "Em breve, conheça os especialistas dedicados a tornar sua experiência inesquecível.",
+    "ctaTitle": "Realize Sua Próxima Grande Jornada",
+    "ctaText": "Permita-nos desenhar sua próxima aventura. Entre em contato e descubra um mundo de possibilidades exclusivas.",
+    "ctaButton": "Fale Conosco",
+    "bannerAlt": "Banner de exclusividade com ambientes luxuosos",
+    "historyImageAlt": "Imagem representativa da nossa história e tradição"
+  },
+  "experiences": {
+    "title": "Explore Nossas Experiências Exclusivas",
+    "description": "Criamos momentos únicos e personalizados, desenhados especialmente para superar suas expectativas. Descubra o que a The Concierge pode oferecer.",
+    "exp1Title": "Gastronomia Exclusiva",
+    "exp1Description": "Jantares privativos com chefs renomados, degustações harmonizadas e acesso aos restaurantes mais cobiçados.",
+    "exp2Title": "Passeios Privados",
+    "exp2Description": "Tours culturais, aventuras sob medida e exploração de destinos com guias especializados e transporte de luxo.",
+    "exp3Title": "Acesso VIP",
+    "exp3Description": "Entradas privilegiadas para eventos exclusivos, shows, espetáculos esportivos e bastidores culturais.",
+    "exp4Title": "Serviços de Luxo",
+    "exp4Description": "Aluguel de iates, jatos privados, personal shoppers e tudo que você precisa para uma estadia impecável.",
+    "gastronomia": {
+      "alt": "Chef renomado preparando prato exclusivo"
+    },
+    "passeios": {
+      "alt": "Guia privativo com casal em frente à Torre Eiffel"
+    },
+    "acessoVip": {
+      "alt": "Palco iluminado em show exclusivo"
+    },
+    "luxo": {
+      "alt": "Iate, jato particular e carro de luxo"
+    }
+  },
+  "routes": {
+    "title": "Roteiros Criados Sob Medida",
+    "description": "Explore destinos fascinantes com itinerários exclusivos, pensados em cada detalhe para proporcionar uma viagem memorável e sem preocupações.",
+    "routeButtonText": "Solicitar Detalhes",
+    "route1Title": "Itália Clássica: Arte e Sabor",
+    "route1Summary": "Uma jornada inesquecível por Roma, Florença e Veneza, explorando a rica história, arte e culinária italiana.",
+    "route2Title": "França Romântica: Paris e Provence",
+    "route2Summary": "Viva o charme de Paris e a beleza dos campos de lavanda da Provence, com experiências exclusivas.",
+    "route3Title": "Grécia Histórica: Atenas e Ilhas",
+    "route3Summary": "Descubra os tesouros arqueológicos de Atenas e relaxe nas deslumbrantes ilhas de Santorini e Mykonos.",
+    "route4Title": "Japão: Tradição e Modernidade",
+    "route4Summary": "Contraste fascinante entre a cultura milenar de Kyoto e a vibrante metrópole de Tóquio.",
+    "italia": {
+      "alt": "Catedral de Florença ao pôr do sol"
+    },
+    "franca": {
+      "alt": "Lavandas da Provence e Torre Eiffel"
+    },
+    "grecia": {
+      "alt": "Parthenon com vista para o mar Egeu"
+    },
+    "japao": {
+      "alt": "Templo tradicional em frente à Torre de Tóquio"
+    }
+  },
+  "contact": {
+    "metadataTitle": "Contato | The Concierge - Fale Conosco",
+    "metadataDescription": "Entre em contato com a The Concierge para planejar sua próxima experiência de luxo. Preencha o formulário ou use nossos canais diretos.",
+    "title": "Entre em Contato",
+    "description": "Tem alguma dúvida ou deseja iniciar o planejamento da sua próxima experiência exclusiva? Preencha o formulário abaixo ou utilize nossos canais diretos.",
+    "formTitle": "Envie Sua Mensagem",
+    "formNameLabel": "Nome Completo",
+    "formEmailLabel": "E-mail",
+    "formPhoneLabel": "Telefone (com DDD)",
+    "formMessageLabel": "Sua Mensagem",
+    "formLgpdLabel": "Concordo com a Política de Privacidade e com o uso dos meus dados para contato.",
+    "submitButton": "Enviar Mensagem",
+    "infoTitle": "Nossos Contatos",
+    "infoEmail": "E-mail",
+    "infoPhone": "Telefone",
+    "infoAddress": "Endereço",
+    "mapTitle": "Nossa Localização",
+    "mapPlaceholder": "Carregando mapa...",
+    "logoAlt": "The Concierge - Logo"
+  }
+} 

@@ -1,0 +1,23 @@
+import { getTranslations } from 'next-intl/server';
+import React from 'react';
+
+// Função para gerar metadados para a rota /quem-somos
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'about' });
+
+  return {
+    title: t('metadataTitle'),
+    description: t('metadataDescription'),
+    // Você pode adicionar outros metadados específicos para esta página aqui
+    // openGraph: { ... }
+  };
+}
+
+// Layout simples que apenas renderiza a página filha
+export default function QuemSomosLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <>{children}</>;
+} 

@@ -1,0 +1,18 @@
+{
+  "navigation": {
+    "home": "Início",
+    "about": "Quem Somos",
+    "experiences": "Experiências",
+    "itineraries": "Roteiros",
+    "contact": "Contato"
+  },
+  "footer": {
+    "quickLinks": "Links Rápidos",
+    "socialMedia": "Redes Sociais",
+    "contactInfo": "Informações de Contato",
+    "rights": "Todos os direitos reservados"
+  },
+  "whatsapp": {
+    "message": "Fale conosco"
+  }
+} 
