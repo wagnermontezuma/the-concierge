@@ -1,10 +1,11 @@
 import { ReactNode } from 'react';
 
-interface Props {
+interface LayoutProps {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
-export default function Layout({ children }: Props) {
+export default async function Layout({ children, params }: LayoutProps) {
+  const { locale } = await params;
   return <>{children}</>;
 } 
