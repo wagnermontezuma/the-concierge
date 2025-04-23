@@ -5,10 +5,6 @@ type Props = {
   params: { locale: string };
 };
 
-export default async function Layout({ children, params }: Props) {
-  return (
-    <html lang={params.locale}>
-      <body>{children}</body>
-    </html>
-  );
+export default async function Layout({ children }: Props) {
+  return children;
 } 
