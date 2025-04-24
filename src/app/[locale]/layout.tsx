@@ -1,42 +1,46 @@
 import { Inter } from 'next/font/google';
-// import { notFound } from 'next/navigation'; // Removido import não utilizado
-// import { NextIntlClientProvider } from 'next-intl';
-// import { getMessages } from 'next-intl/server';
-// import { locales } from '@/i18n/config'; // Comentado
+import { notFound } from 'next/navigation';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { locales } from '@/i18n/config';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import '../globals.css';
+import type { Locale } from '@/i18n/config';
 
 const inter = Inter({ subsets: ['latin'] });
 
-/* // Comentado
+// Gera as rotas estáticas para cada locale
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
-*/
 
+// Props esperadas pelo layout: children e params (Promise)
 interface RootLayoutProps {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: Locale }>;
 }
 
 export default async function LocaleLayout({ children, params }: RootLayoutProps) {
-  const { locale } = params;
+  // Aguarda resolução de params e tipa locale como Locale
+  const { locale } = (await params) as { locale: Locale };
 
-  // if (!locales.includes(locale as (typeof locales)[number])) notFound(); // Comentado
+  // Se locale inválido, retorna 404
+  if (!locales.includes(locale)) notFound();
 
-  // const messages = await getMessages(); // Comentado
+  // Carrega as mensagens de tradução
+  const messages = await getMessages({ locale });
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body className={inter.className} suppressHydrationWarning>
-        {/* <NextIntlClientProvider messages={messages} locale={locale}> */}{/* Comentado */}
+    <html lang={locale} className={inter.className} suppressHydrationWarning>
+      <body suppressHydrationWarning>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           <main className="min-h-screen">{children}</main>
           <Footer />
           <WhatsAppButton />
-        {/* </NextIntlClientProvider> */}{/* Comentado */}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
