@@ -16,11 +16,11 @@ export function generateStaticParams() {
 
 interface RootLayoutProps {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }
 
 export default async function LocaleLayout({ children, params }: RootLayoutProps) {
-  const { locale } = await params;
+  const { locale } = params;
 
   if (!locales.includes(locale as (typeof locales)[number])) notFound();
 
