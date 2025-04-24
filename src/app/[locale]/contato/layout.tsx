@@ -13,8 +13,8 @@ export default async function Layout({
   params: { locale: string };
 }) {
   return (
-    <html lang={params.locale}>
-      <body>{children}</body>
-    </html>
+    <section lang={params.locale}>
+      {children}
+    </section>
   );
 } 
