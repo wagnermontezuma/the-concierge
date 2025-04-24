@@ -1,5 +1,5 @@
 import { Inter } from 'next/font/google';
-import { notFound } from 'next/navigation';
+// import { notFound } from 'next/navigation'; // Removido import não utilizado
 // import { NextIntlClientProvider } from 'next-intl';
 // import { getMessages } from 'next-intl/server';
 // import { locales } from '@/i18n/config'; // Comentado
