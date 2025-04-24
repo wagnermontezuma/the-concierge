@@ -1,6 +1,7 @@
-import { getTranslations } from 'next-intl/server';
+// import { getTranslations } from 'next-intl/server'; // Comentado
 import React from 'react';
 
+/* // Comentado temporariamente
 // Função para gerar metadados para a rota /quem-somos
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'about' });
@@ -12,6 +13,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     // openGraph: { ... }
   };
 }
+*/
 
 type Props = {
   children: React.ReactNode;
