@@ -13,11 +13,13 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-// Layout simples que apenas renderiza a página filha
-export default function QuemSomosLayout({
-  children,
-}: {
+type Props = {
   children: React.ReactNode;
-}) {
+  // params não são usados aqui, mas definimos para possível inferência interna
+  // params: { locale: string };
+};
+
+// Layout simples que apenas renderiza a página filha
+export default function QuemSomosLayout({ children }: Props) {
   return <>{children}</>;
 } 
